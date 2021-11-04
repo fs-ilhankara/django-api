@@ -8,5 +8,22 @@
 </head>
 <body>
     <h1>Weather App</h1>
+    <br>
+    <hr>
+    <form action="" method="get" >
+        <input name="name">
+        <input type="submit" value="Add">
+    </form>
+    <br>
+    <hr>
+
+    
+    {% for city in city_data %}
+        {{ city.city.name }} <br>
+        {{ city.temp }} <br>
+        {{ city.desc }} <br>
+        <img src="http://openweathermap.org/img/w/{{ city.icon }}.png" alt="icon"><br><hr>
+    {% endfor %}
+        
 </body>
 </html>
